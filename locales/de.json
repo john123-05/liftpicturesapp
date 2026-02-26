@@ -1,0 +1,917 @@
+{
+  "common": {
+    "liftpictures": "Liftpictures",
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "ok": "OK",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "or": "oder",
+    "info": "Info"
+  },
+  "home": {
+    "welcome": "Willkommen zurück, {{name}}!",
+    "photosAndMemories": "Fotos & Erinnerungen",
+    "scanQR": "Fahrt erfassen",
+    "processing": "Verarbeite...",
+    "findYourPhotos": "Jetzt gefahren? Zeit speichern",
+    "toGallery": "Zur Galerie",
+    "purchaseOptions": "Kaufoptionen",
+    "dayPhotoPass": "Tagesfotopass",
+    "parkTickets": "Park-Tickets",
+    "from": "ab",
+    "parkInfo": "Parkinfos",
+    "news": "Neuigkeiten",
+    "whatsNew": "Was ist neu?",
+    "menu": "Speisekarte",
+    "restaurantAndSnacks": "Restaurant & Imbiss",
+    "infos": "Infos",
+    "openingHoursEtc": "Öffnungszeiten etc.",
+    "parkMap": "Parkplan",
+    "whereIsWhat": "Wo ist was?",
+    "demoVersion": "📱 Demo Version 0.01",
+    "demoText": "Dies ist eine Web-App zu Demonstrationszwecken. Die vollständige App wird in zukünftigen Entwicklungen in den App Stores verfügbar sein.",
+    "secureMemories": "Sichere dir deine Erinnerungen in bester Qualität",
+    "qrCodeDetected": "QR Code erkannt!",
+    "loadingPhotos": "Ihre Bilder werden geladen...",
+    "cameraPermissionError": "Kamera-Berechtigung konnte nicht überprüft werden.",
+    "cameraAccessRequired": "Kamera-Zugriff erforderlich",
+    "cameraAccessDescription": "Um QR-Codes zu scannen, benötigen wir Zugriff auf Ihre Kamera. Dies ist notwendig, um Ihre Fotos von der Sommerrodelbahn zu finden.",
+    "grantPermission": "Berechtigung erteilen",
+    "invalidQRCode": "Ungültiger QR-Code",
+    "invalidQRCodeDescription": "Der gescannte Code ist nicht gültig. Bitte versuchen Sie es erneut oder wenden Sie sich an das Personal.",
+    "scanAgain": "Erneut scannen",
+    "qrCodeSuccessfullyScanned": "QR Code erfolgreich gescannt!",
+    "sessionID": "Session-ID: {{id}}...",
+    "scanError": "Scan-Fehler",
+    "scanErrorDescription": "QR-Code konnte nicht erkannt werden. Stellen Sie sicher, dass der Code gut sichtbar und nicht beschädigt ist.",
+    "tryAgain": "Erneut versuchen",
+    "scanQRTitle": "QR-Code scannen",
+    "scanInstruction": "Richten Sie die Kamera auf den QR-Code an Ihrem Platz oder am Ausgang",
+    "switchCamera": "Kamera wechseln",
+    "problemsScanning": "Probleme beim Scannen?",
+    "addedToCart": "Zum Warenkorb hinzugefügt!",
+    "photoPassAddedDescription": "Der Tagesfotopass wurde zu deinem Warenkorb hinzugefügt.",
+    "ticketAddedDescription": "{{ticketName}} für {{date}} wurde zu deinem Warenkorb hinzugefügt.",
+    "continueShopping": "Weiter einkaufen",
+    "toCart": "Zum Warenkorb"
+  },
+  "photoPass": {
+    "title": "🌟 Tagesfotopass",
+    "price": "€14.99",
+    "oneTimePrice": "Einmaliger Tagespreis",
+    "whatYouGet": "Was du bekommst:",
+    "unlimitedPhotos": "Unbegrenzte Fotos",
+    "unlimitedPhotosDescription": "Alle deine Fahrten heute - ohne Einzelkauf",
+    "instantDownload": "Sofortiger Download",
+    "instantDownloadDescription": "Hochauflösende Bilder direkt verfügbar",
+    "save": "Spare bis zu 50%",
+    "saveDescription": "Bei 3+ Fotos schon günstiger als Einzelkauf",
+    "noWaitTime": "Keine Wartezeit",
+    "noWaitTimeDescription": "Alle Bilder sofort in deiner Galerie",
+    "howItWorks": "So funktioniert's:",
+    "step1": "1. Tagesfotopass kaufen",
+    "step2": "2. QR-Code wie gewohnt scannen",
+    "step3": "3. Alle Fotos automatisch freigeschaltet",
+    "step4": "4. Direkt downloaden und teilen",
+    "validity": "Gültigkeit:",
+    "validityText": "Der Pass ist heute bis 23:59 Uhr gültig und deckt alle deine Fahrten ab.",
+    "addToCart": "In Warenkorb • €14.99",
+    "decideLater": "Später entscheiden"
+  },
+  "tickets": {
+    "title": "🎢 Park Tickets",
+    "selectType": "Ticket-Art wählen:",
+    "adult": "Tagesticket Erwachsene",
+    "adultDescription": "Einzelticket für Erwachsene ab 13 Jahren",
+    "family": "Familienticket (2+2)",
+    "familyDescription": "2 Erwachsene + 2 Kinder (4-12 Jahre)",
+    "season": "Saisonkarte Erwachsene",
+    "seasonDescription": "Unbegrenzter Zugang für die ganze Saison",
+    "selectDate": "Datum wählen:",
+    "today": "Heute",
+    "included": "Das ist enthalten:",
+    "allAttractions": "Alle Attraktionen",
+    "allAttractionsDescription": "Zugang zu allen Fahrgeschäften im Park",
+    "showsIncluded": "Shows inklusive",
+    "showsIncludedDescription": "Alle Aufführungen ohne Zusatzkosten",
+    "freeParking": "Kostenlos parken",
+    "freeParkingDescription": "Parkplätze direkt am Eingang",
+    "familyFriendly": "Familienfreundlich",
+    "familyFriendlyDescription": "Attraktionen für alle Altersgruppen",
+    "summary": "Zusammenfassung:",
+    "date": "Datum: {{date}}",
+    "addToCart": "In Warenkorb • €{{price}}"
+  },
+  "closingModal": {
+    "title": "🚀 Wir schließen gleich!",
+    "lastChance": "Letzte Chance auf Thunder Mountain!",
+    "description": "Fahren Sie nochmal unsere spektakuläre Achterbahn oder jagen Sie Ihren Geschwindigkeitsrekord auf dem Speed Racer!",
+    "bookTicket": "Buchen Sie Ihr Ticket fürs nächste Mal",
+    "bookTicketDescription": "Sichern Sie sich jetzt schon Ihren Platz für den nächsten Besuch",
+    "newsletter": "Newsletter abonnieren & sparen! 💰",
+    "newsletterDescription": "Melden Sie sich zu unserem Newsletter an und erhalten Sie 10% Rabatt auf Familientickets\n\nWir halten Sie auf dem Laufenden über:\n• Neue Attraktionen & Events\n• Exklusive Angebote & Rabatte  \n• Saisonhighlights & Shows",
+    "subscribeNewsletter": "Newsletter abonnieren (-10%)",
+    "bookTicketForNext": "Ticket für nächstes Mal buchen",
+    "goodbye": "Auf Wiedersehen! 👋",
+    "subscribed": "Newsletter abonniert! 🎉",
+    "subscribedDescription": "Vielen Dank! Sie erhalten in Kürze eine Bestätigung per E-Mail mit Ihrem 10% Rabattcode für Familientickets.",
+    "perfect": "Perfekt!"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Deine Statistiken heute",
+    "ridesToday": "Fahrten heute",
+    "personalRecord": "Persönlicher Rekord!",
+    "bestTime": "Bestzeit",
+    "newBestTime": "Neue Bestzeit!",
+    "topSpeed": "Höchstgeschwindigkeit",
+    "achievedToday": "Heute erreicht",
+    "dailyRanking": "Tagesranking",
+    "ofRiders": "von {{count}} Fahrern",
+    "newBestTimeAchievement": "Neue Bestzeit!",
+    "improvedBestTime": "Du hast deine persönliche Bestzeit verbessert",
+    "leaderboard": "Tagesranking",
+    "you": "Du",
+    "nextGoal": "Nächstes Ziel",
+    "nextGoalDescription": "Nur 0.3 km/h bis Platz 6! Du schaffst das! 🚀",
+    "startNewRide": "Neue Fahrt starten",
+    "myRidesToday": "Meine Fahrten (heute)",
+    "allRides": "Alle Fahrten",
+    "noRidesToday": "Noch keine Fahrten heute"
+  },
+  "rides": {
+    "title": "Fahrt erfassen",
+    "subtitle": "Speichere deine Fahrt",
+    "captureNow": "Ich bin jetzt gefahren",
+    "manualTime": "Zeit manuell eingeben",
+    "selectTime": "Zeit auswählen",
+    "selectDate": "Datum auswählen",
+    "noteOptional": "Notiz (optional)",
+    "notePlaceholder": "z.B. Fahrt #3, Wagen 2...",
+    "saveTime": "Zeit speichern",
+    "rideSaved": "Fahrt gespeichert",
+    "rideDeleted": "Fahrt gelöscht",
+    "deleteRide": "Fahrt löschen",
+    "deleteConfirm": "Fahrt wirklich löschen?",
+    "delete": "Löschen",
+    "myRides": "Meine Fahrten",
+    "noRides": "Noch keine Fahrten",
+    "noRidesDescription": "Erfasse deine erste Fahrt!",
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "now": "Jetzt",
+    "manual": "Manuell",
+    "qrFuture": "QR-Scan folgt später (App/Deep Link)",
+    "timeFormat": "HH:MM"
+  },
+  "gallery": {
+    "title": "Deine Bilder",
+    "subtitle": "{{filtered}} von {{total}} Fotos",
+    "all": "Alle",
+    "favorites": "Favoriten",
+    "socialMedia": "Social Media",
+    "pleaseLogin": "Bitte melde dich an, um deine Bilder zu sehen",
+    "login": "Anmelden",
+    "preview": "VORSCHAU",
+    "speed": "Geschwindigkeit: {{speed}} km/h",
+    "buyPhoto": "Foto kaufen",
+    "wantToBuyPhoto": "Möchtest du dieses Foto kaufen?",
+    "buyNow": "Sofort kaufen",
+    "photoAddedToCart": "Foto vom {{timestamp}} wurde zu deinem Warenkorb hinzugefügt.",
+    "loginFirst": "Bitte zuerst anmelden",
+    "favoriteSaveFailed": "Favorit konnte nicht gespeichert werden",
+    "addedToCartTitle": "Zum Warenkorb hinzugefügt",
+    "alreadyInCartTitle": "Dieses Bild ist bereits im Warenkorb",
+    "toCartButton": "Zum Warenkorb",
+    "downloadStarting": "Bild wird heruntergeladen",
+    "permissionRequiredTitle": "Berechtigung erforderlich",
+    "permissionRequiredDescription": "Bitte erlaube den Zugriff auf deine Fotos/Galerie.",
+    "savedToGallery": "Bild wurde in deiner Galerie gespeichert",
+    "downloadFailed": "Bild konnte nicht heruntergeladen werden",
+    "shareMessageSingle": "Schau dir mein Foto an!",
+    "shareMessageMultiple": "Schau dir meine Fotos an!",
+    "selectAtLeastOneImage": "Bitte waehle mindestens ein Bild aus."
+  },
+  "socialMedia": {
+    "title": "📸 Teile deine Fotos!",
+    "subtitle": "Teile deine Abenteuer-Momente mit der Welt und gewinne tolle Preise!",
+    "tagUs": "Tagge uns",
+    "tagUsDescription": "@adventureland_park in deinem Post",
+    "followUs": "Folge uns",
+    "followUsDescription": "für die neuesten Updates & Events",
+    "useHashtags": "Nutze Hashtags",
+    "useHashtagsDescription": "#Liftpictures #AdventureLand #Abenteuer",
+    "monthlyPrize": "Monatlicher Gewinn!",
+    "monthlyPrizeDescription": "2x Familientickets für den nächsten Besuch",
+    "choosePlatform": "Wähle deine Plattform:",
+    "instagram": "Instagram",
+    "instagramAction": "Öffne Instagram und teile dein Foto mit #Liftpictures #AdventureLand",
+    "facebook": "Facebook",
+    "facebookAction": "Teile deine Abenteuer-Fotos auf Facebook und tagge @adventureland_park!",
+    "twitter": "Twitter",
+    "twitterAction": "Twittere deine Fotos mit #Liftpictures #AdventureLand und tagge @adventureland_park!",
+    "whatsapp": "WhatsApp",
+    "whatsappAction": "Teile deine Fotos über WhatsApp mit Freunden und Familie!",
+    "telegram": "Telegram",
+    "telegramAction": "Teile deine Fotos über Telegram!",
+    "tiktok": "TikTok",
+    "tiktokAction": "Erstelle ein cooles TikTok-Video mit #Liftpictures #AdventureLand!",
+    "newsletterButton": "📧 Newsletter abonnieren für exklusive Gewinnchancen",
+    "newsletterSubscribed": "Danke für dein Interesse! Du erhältst bald mehr Infos zu Gewinnspielen."
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "subtitle": "{{count}} {{unit}} • €{{total}}",
+    "photo": "Foto",
+    "photos": "Fotos",
+    "yourSelectedPhotos": "Deine ausgewählten Fotos",
+    "empty": "Warenkorb ist leer",
+    "emptyDescription": "Füge Fotos aus der Galerie hinzu, um sie zu kaufen",
+    "browseGallery": "Zur Galerie",
+    "removePhoto": "Foto entfernen",
+    "removePhotoDescription": "Möchtest du dieses Foto aus dem Warenkorb entfernen?",
+    "remove": "Entfernen",
+    "unlimitedPhotosToday": "Unbegrenzte Fotos heute",
+    "orderSummary": "Bestellübersicht",
+    "subtotal": "Zwischensumme",
+    "processingFee": "Bearbeitungsgebühr",
+    "total": "Gesamt",
+    "paymentMethod": "Zahlungsmethode",
+    "creditCard": "Kreditkarte",
+    "securePayment": "Sichere Zahlung mit 256-Bit SSL-Verschlüsselung",
+    "buyNow": "Jetzt kaufen • €{{total}}",
+    "processing": "Verarbeitung...",
+    "clearCart": "Warenkorb leeren",
+    "clearCartConfirm": "Möchtest du alle Fotos aus dem Warenkorb entfernen?",
+    "clearCartButton": "Warenkorb leeren",
+    "emptyCart": "Warenkorb leer",
+    "emptyCartDescription": "Füge Fotos zu deinem Warenkorb hinzu, um fortzufahren.",
+    "paymentSuccessful": "Zahlung erfolgreich!",
+    "paymentSuccessfulDescription": "Deine Fotos wurden gekauft und werden heruntergeladen.",
+    "loginRequired": "Sie müssen angemeldet sein, um fortzufahren.",
+    "checkoutStartFailed": "Zahlung konnte nicht gestartet werden.",
+    "paymentCancelledTitle": "Zahlung abgebrochen",
+    "paymentCancelledDescription": "Ihre Artikel bleiben im Warenkorb.",
+    "photosUnlocked": "Ihre Fotos wurden freigeschaltet!",
+    "checkoutErrorWithMessage": "Ein Fehler ist aufgetreten: {{message}}",
+    "unknownError": "Unbekannter Fehler"
+  },
+  "profile": {
+    "title": "Profil",
+    "rides": "Fahrten",
+    "memberSince": "Mitglied seit",
+    "account": "Konto",
+    "editProfile": "Profil bearbeiten",
+    "editProfileDescription": "Name und E-Mail ändern",
+    "notifications": "Benachrichtigungen",
+    "notificationsDescription": "Push-Nachrichten verwalten",
+    "data": "Daten",
+    "downloadAllPhotos": "Alle Bilder herunterladen",
+    "downloadAllPhotosDescription": "Deine komplette Sammlung",
+    "sharePhotos": "Bilder teilen",
+    "sharePhotosDescription": "Mit Freunden und Familie",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "privacyDescription": "Datenschutzerklärung lesen",
+    "helpAndSupport": "Hilfe & Support",
+    "helpAndSupportDescription": "FAQ und Kontakt",
+    "version": "Liftpictures v1.0.0",
+    "copyright": "© 2024 Liftpictures. Alle Rechte vorbehalten.",
+    "downloadStarted": "Download gestartet",
+    "comingSoon": "Coming Soon",
+    "demoAccess": "Demo-Zugang",
+    "logoutTitle": "Abmelden",
+    "logoutDescription": "Möchtest du dich wirklich abmelden? Du musst das Passwort danach erneut eingeben.",
+    "logoutButton": "Logout",
+    "logoutSubtitle": "Demo-Zugang beenden",
+    "avatar": {
+      "permissionRequired": "Bitte erlaube den Zugriff auf deine Fotos.",
+      "savedTitle": "Profilbild gespeichert",
+      "saveFailed": "Profilbild konnte nicht gespeichert werden."
+    },
+    "delete": {
+      "noEmailOnAccount": "Keine E-Mail fuer das Konto vorhanden.",
+      "loginRequired": "Bitte zuerst einloggen, um dein Konto zu loeschen.",
+      "requestConfirmedTitle": "Loeschanfrage bestaetigt",
+      "requestConfirmedDescription": "Wir haben dir eine E-Mail an {{email}} gesendet. Bitte bestaetige die Loeschung mit dem Code aus der E-Mail.",
+      "sendVerificationFailed": "E-Mail zur Loesch-Bestaetigung konnte nicht gesendet werden.",
+      "deletedTitle": "Konto geloescht",
+      "deletedDescription": "Dein Konto und deine Daten wurden erfolgreich geloescht.",
+      "deleteFailed": "Konto konnte nicht geloescht werden.",
+      "deletingLabel": "Loesche...",
+      "menuTitle": "Konto loeschen",
+      "menuSubtitle": "Loescht dein Konto und alle Daten nach E-Mail-Bestaetigung",
+      "confirmTitle": "Konto wirklich loeschen?",
+      "confirmDescription": "Bist du sicher? Alle Daten werden geloescht. Stelle sicher, dass deine Bilder gespeichert sind.",
+      "keepAccessButton": "Nein, Zugriff behalten",
+      "confirmDeleteButton": "Ja, loeschen",
+      "emailVerificationTitle": "E-Mail-Bestaetigung",
+      "emailVerificationDescription": "Gib den Code aus deiner E-Mail ein, um die Kontoloeschung final zu bestaetigen.",
+      "codePlaceholder": "Code eingeben",
+      "finalDeleteButton": "Endgueltig loeschen"
+    }
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signUp": "Konto erstellen",
+    "signInDescription": "Melde dich an, um deine Bilder zu sehen",
+    "signUpDescription": "Erstelle ein Konto für alle deine Fahrten",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "signInButton": "Anmelden",
+    "signUpButton": "Konto erstellen",
+    "alreadyHaveAccount": "Hast du bereits ein Konto? ",
+    "noAccount": "Noch kein Konto? ",
+    "register": "Registrieren",
+    "terms": "Nutzungsbedingungen",
+    "termsOfService": "Nutzungsbedingungen",
+    "privacyPolicy": "Datenschutzerklärung",
+    "fillAllFields": "Bitte fülle alle Felder aus.",
+    "authFailed": "Authentifizierung fehlgeschlagen",
+    "unexpectedError": "Ein unerwarteter Fehler ist aufgetreten.",
+    "createAccount": "Konto erstellen",
+    "createAccountSubtitle": "Erstelle ein Konto für alle deine Fahrten",
+    "signInSubtitle": "Melde dich an, um deine Bilder zu sehen",
+    "emailAddress": "E-Mail-Adresse",
+    "haveAccountPrompt": "Hast du bereits ein Konto? ",
+    "noAccountPrompt": "Noch kein Konto? ",
+    "signupSuccess": "Registrierung erfolgreich! Bitte überprüfe deine E-Mail, um dein Konto zu bestätigen.",
+    "termsPrefix": "Mit der Anmeldung stimmst du unseren",
+    "andThe": "und der",
+    "termsSuffix": "zu.",
+    "park": "Park",
+    "loadingParks": "Parks werden geladen...",
+    "selectPark": "Park auswählen",
+    "errors": {
+      "fillAllFields": "Bitte fülle alle Felder aus.",
+      "selectParkRequired": "Bitte wähle einen Park aus.",
+      "passwordTooShort": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+      "authFailed": "Authentifizierung fehlgeschlagen",
+      "invalidCredentials": "Ungültige E-Mail oder Passwort",
+      "emailNotConfirmed": "Bitte bestätige zuerst deine E-Mail-Adresse",
+      "emailAlreadyRegistered": "Diese E-Mail-Adresse ist bereits registriert",
+      "unexpected": "Ein unerwarteter Fehler ist aufgetreten."
+    }
+  },
+  "tabs": {
+    "home": "Start",
+    "gallery": "Galerie",
+    "cart": "Warenkorb",
+    "dashboard": "Dashboard",
+    "profile": "Profil"
+  },
+  "info": {
+    "title": "Park Informationen",
+    "welcomeTitle": "🎢 Adventure Land",
+    "welcomeSubtitle": "Ihr Familien-Freizeitpark im Herzen Deutschlands",
+    "welcomeText": "Seit 1987 bieten wir unvergessliche Erlebnisse für die ganze Familie. Mit über 30 Attraktionen, Shows und gastronomischen Angeboten ist für jeden etwas dabei!",
+    "contact": {
+      "title": "📞 Kontakt & Adresse",
+      "parkName": "Freizeitpark Adventure Land",
+      "address1": "Abenteuer Allee 15",
+      "address2": "12345 Funstadt",
+      "hotline": "Hotline: +49 (0)800 123 456 789",
+      "email": "E-Mail: info@adventureland-park.de",
+      "website": "Web: www.adventureland-park.de",
+      "emergency": "Notfall im Park: +49 (0)800 123 456 911"
+    },
+    "hours": {
+      "title": "🕒 Öffnungszeiten",
+      "regular": "REGULÄRE SAISON (April - Oktober):",
+      "weekdays": "Montag - Freitag: 10:00 - 18:00 Uhr",
+      "weekends": "Samstag - Sonntag: 09:00 - 20:00 Uhr",
+      "holidays": "Feiertage: 09:00 - 20:00 Uhr",
+      "highSeason": "HOCHSAISON (Juli - August):",
+      "highSeasonHours": "Täglich: 09:00 - 21:00 Uhr",
+      "winter": "WINTERSAISON (November - März):",
+      "winterHours": "Nur Wochenends: 11:00 - 17:00 Uhr",
+      "lastEntry": "Letzter Einlass: 1 Stunde vor Schließung"
+    },
+    "prices": {
+      "title": "💶 Eintrittspreise",
+      "adults": "ERWACHSENE (ab 13 Jahre): €24.90",
+      "children": "KINDER (4-12 Jahre): €19.90",
+      "seniors": "SENIOREN (ab 65): €22.90",
+      "toddlers": "KLEINKINDER (unter 4): KOSTENLOS",
+      "familyTickets": "FAMILIENTICKETS:",
+      "familyStandard": "Familie Standard (2+2): €79.90",
+      "familyLarge": "Familie Groß (2+3): €94.90",
+      "familyXXL": "Familie XXL (2+4): €109.90",
+      "seasonPasses": "SAISONKARTEN:",
+      "seasonAdult": "Erwachsene: €89.90",
+      "seasonChild": "Kinder: €69.90"
+    },
+    "transport": {
+      "title": "🚗 Anfahrt & Parken",
+      "car": "PKW:",
+      "highway": "Autobahn A7, Ausfahrt \"Funstadt-Ost\"",
+      "directions": "Dann 5km der Beschilderung folgen",
+      "gps": "GPS: Abenteuer Allee 15, 12345 Funstadt",
+      "parking": "PARKEN:",
+      "parkingSpots": "500 kostenlose Parkplätze",
+      "disabledParking": "50 Behindertenparkplätze (direkt am Eingang)",
+      "familyParking": "20 Familienparkplätze (breite Stellplätze)",
+      "publicTransport": "ÖFFENTLICHE VERKEHRSMITTEL:",
+      "bus": "Bus Linie 42: Haltestelle \"Adventure Land\"",
+      "train": "S-Bahn S3: Bahnhof Funstadt + Bus 42",
+      "shuttle": "Shuttle-Service vom Bahnhof (€2 p.P.)"
+    },
+    "accessibility": {
+      "title": "♿ Barrierefreiheit",
+      "wheelchair": "ROLLSTUHLGERECHTE AUSSTATTUNG:",
+      "wheelchairPaths": "✅ Alle Hauptwege rollstuhlgerecht",
+      "wheelchairAttractions": "✅ 15 rollstuhlgerechte Attraktionen",
+      "wheelchairToilets": "✅ Behindertentoiletten in jedem Bereich",
+      "wheelchairRental": "✅ Rollstuhlverleih kostenlos (nach Verfügbarkeit)",
+      "visuallyImpaired": "FÜR SEHBEHINDERTE:",
+      "guideDogs": "✅ Blindenhunde willkommen",
+      "tactileSystems": "✅ Taktile Leitsysteme",
+      "audioGuides": "✅ Audio-Guides verfügbar",
+      "hearingImpaired": "FÜR HÖRBEHINDERTE:",
+      "inductionLoops": "✅ Induktionsschleifen an Service-Points",
+      "signLanguage": "✅ Gebärdensprachdolmetscher (auf Anfrage)"
+    },
+    "rules": {
+      "title": "📋 Hausordnung",
+      "notAllowed": "NICHT GESTATTET:",
+      "noFood": "• Eigene Speisen und Getränke",
+      "noGlass": "• Glasflaschen und Dosen",
+      "noPets": "• Haustiere (außer Assistenzhunde)",
+      "noWeapons": "• Waffen und gefährliche Gegenstände",
+      "noAlcohol": "• Alkohol von außerhalb",
+      "noDrones": "• Drohnen und Modellflugzeuge",
+      "photography": "FOTOGRAFIEREN:",
+      "privateAllowed": "✅ Private Fotos und Videos erlaubt",
+      "commercialNo": "❌ Kommerzielle Nutzung nur mit Genehmigung",
+      "noFlash": "❌ Blitzlicht in Fahrgeschäften",
+      "health": "GESUNDHEIT:",
+      "pacemaker": "• Herzschrittmacher: Attraktionen meiden",
+      "pregnancy": "• Schwangerschaft: Vorsicht bei Fahrgeschäften",
+      "heightRequirement": "• Mindestgröße beachten (90cm - 140cm je nach Attraktion)"
+    },
+    "emergency": {
+      "title": "🚨 Notfall im Park",
+      "description": "Bei medizinischen Notfällen oder anderen Problemen wenden Sie sich sofort an:",
+      "number": "📞 +49 (0)800 123 456 911",
+      "location": "Erste-Hilfe-Stationen finden Sie im Family Area (Hauptstation), Thrill Zone und Adventure Land."
+    },
+    "footer": "Adventure Land - Wo Träume wahr werden! 🎢✨"
+  },
+  "news": {
+    "title": "Neuigkeiten",
+    "categories": {
+      "attraction": "Attraktionen",
+      "event": "Events",
+      "food": "Gastronomie",
+      "general": "Allgemein"
+    },
+    "badges": {
+      "new": "NEU"
+    },
+    "items": {
+      "thunderMountain": {
+        "title": "NEUE ACHTERBAHN \"Thunder Mountain\" eröffnet!",
+        "date": "1. August 2024",
+        "content": "Die spektakuläre neue Achterbahn \"Thunder Mountain\" ist jetzt geöffnet! Mit einer Höhe von 65 Metern und Geschwindigkeiten bis zu 85 km/h bietet sie Nervenkitzel pur. Erste Testfahrer sind begeistert von den 7 Loopings und dem 360-Grad-Korkenzieher."
+      },
+      "summerFest": {
+        "title": "Sommerfest vom 15.-17. Juli",
+        "date": "10. Juli 2024",
+        "content": "Unser großes Sommerfest steht vor der Tür! Drei Tage voller Live-Musik, Straßenkünstler und ein spektakuläres Feuerwerk jeden Abend um 22:00 Uhr. Spezielle Food-Trucks bieten internationale Küche."
+      },
+      "pizzaStation": {
+        "title": "Pizza-Station \"Mama Mia\" neu eröffnet",
+        "date": "25. Juni 2024",
+        "content": "Im Herzen der Thrill Zone hat unsere neue Pizza-Station eröffnet! Authentische italienische Pizzen aus dem Steinofen, zubereitet von echten italienischen Köchen. Probiert die Spezialität \"Thunder Mountain\" mit scharfer Salami!"
+      },
+      "familyDiscount": {
+        "title": "Familienrabatt verlängert",
+        "date": "20. Juni 2024",
+        "content": "Aufgrund der großen Nachfrage verlängern wir unseren Familienrabatt! Familien mit 2 Erwachsenen und 2 Kindern zahlen nur 80€ statt 96€. Gültig bis Ende August 2024."
+      },
+      "circus": {
+        "title": "Zirkus \"Fantasia\" gastiert im Park",
+        "date": "15. Juni 2024",
+        "content": "Der berühmte Zirkus \"Fantasia\" gastiert den ganzen Sommer über bei uns! Shows täglich um 14:00 und 16:30 Uhr im großen Amphitheater. Akrobatik, Clowns und wilde Tiere sorgen für Unterhaltung für die ganze Familie."
+      },
+      "newParking": {
+        "title": "Neue Parkplätze in Sektor C",
+        "date": "5. Juni 2024",
+        "content": "Wir haben 200 zusätzliche Parkplätze im neuen Sektor C eröffnet. Kostenlose Parkplätze für alle Besucher, nur 3 Gehminuten zum Haupteingang. Behindertenparkplätze direkt am Eingang verfügbar."
+      }
+    },
+    "footer": "Folgen Sie uns für weitere Updates!"
+  },
+  "menu": {
+    "title": "Speisekarte",
+    "intro": {
+      "title": "Willkommen in unserer Gastronomie!",
+      "text": "Von authentischer italienischer Pizza bis hin zu deutschen Klassikern - wir haben für jeden Geschmack das Richtige!"
+    },
+    "badges": {
+      "new": "NEU",
+      "popular": "BELIEBT"
+    },
+    "categories": {
+      "pizza": "Pizza Station \"Mama Mia\"",
+      "burgers": "Burger Grill \"Big Bite\"",
+      "german": "Bratwurst Stand",
+      "healthy": "Healthy Corner",
+      "sweets": "Süßes & Getränke"
+    },
+    "items": {
+      "pizzaMargherita": {
+        "name": "Pizza Margherita",
+        "description": "Tomatensauce, Mozzarella, Basilikum"
+      },
+      "pizzaSalami": {
+        "name": "Pizza Salami",
+        "description": "Mit italienischer Salami"
+      },
+      "pizzaQuattro": {
+        "name": "Pizza Quattro Stagioni",
+        "description": "Vier Jahreszeiten mit Pilzen, Schinken, Artischocken"
+      },
+      "pizzaThunder": {
+        "name": "Pizza Thunder Mountain",
+        "description": "Scharfe Salami, Jalapeños, scharfe Sauce"
+      },
+      "pizzaVeggie": {
+        "name": "Pizza Vegetarisch",
+        "description": "Paprika, Zucchini, Auberginen, Feta"
+      },
+      "classicBurger": {
+        "name": "Classic Burger",
+        "description": "Mit Pommes und Coleslaw"
+      },
+      "cheeseburger": {
+        "name": "Cheeseburger Deluxe",
+        "description": "Doppelter Käse, Bacon, Zwiebeln"
+      },
+      "bbqBurger": {
+        "name": "BBQ Bacon Burger",
+        "description": "BBQ-Sauce, geröstete Zwiebeln, knuspriger Bacon"
+      },
+      "veggieBurger": {
+        "name": "Veggie Burger",
+        "description": "Hausgemachter Gemüse-Patty"
+      },
+      "chickenBurger": {
+        "name": "Chicken Burger",
+        "description": "Gegrillte Hähnchenbrust, Avocado"
+      },
+      "bratwurst": {
+        "name": "Bratwurst mit Brötchen",
+        "description": "Mit Senf oder Ketchup"
+      },
+      "currywurst": {
+        "name": "Currywurst mit Pommes",
+        "description": "Mit hausgemachter Currysauce"
+      },
+      "thuringer": {
+        "name": "Thüringer Roster",
+        "description": "Original Thüringer Bratwurst"
+      },
+      "weisswurst": {
+        "name": "Weißwurst",
+        "description": "Mit süßem Senf und Brezel"
+      },
+      "caesarSalad": {
+        "name": "Caesar Salad",
+        "description": "Römersalat, Parmesan, Croutons, Caesar-Dressing"
+      },
+      "chickenWrap": {
+        "name": "Chicken Wrap",
+        "description": "Gegrilltes Hähnchen, Gemüse, Joghurt-Dressing"
+      },
+      "quinoaBowl": {
+        "name": "Quinoa Bowl",
+        "description": "Quinoa, Avocado, geröstetes Gemüse"
+      },
+      "fruitSalad": {
+        "name": "Obstsalat",
+        "description": "Saisonale Früchte"
+      },
+      "smoothieBowl": {
+        "name": "Smoothie Bowl",
+        "description": "Acai, Beeren, Granola"
+      },
+      "softIceCream": {
+        "name": "Softeis",
+        "description": "Vanille, Schokolade oder Erdbeere"
+      },
+      "churros": {
+        "name": "Churros",
+        "description": "Mit Zimt und Zucker"
+      },
+      "almonds": {
+        "name": "Gebrannte Mandeln",
+        "description": "Frisch geröstet"
+      },
+      "soda": {
+        "name": "Cola/Fanta 0,5L",
+        "description": ""
+      },
+      "water": {
+        "name": "Wasser 0,5L",
+        "description": ""
+      },
+      "beer": {
+        "name": "Bier 0,4L",
+        "description": "Kühles Pils vom Fass"
+      },
+      "coffee": {
+        "name": "Kaffee",
+        "description": "Espresso, Cappuccino, Latte"
+      },
+      "hotChocolate": {
+        "name": "Heiße Schokolade",
+        "description": "Mit Sahne und Marshmallows"
+      }
+    },
+    "footer": {
+      "title": "Öffnungszeiten Gastronomie",
+      "weekdays": "Mo-Fr: 10:00 - 17:30",
+      "weekends": "Sa-So: 09:00 - 19:30",
+      "summer": "Juli/August: täglich bis 20:30",
+      "note": "Alle Preise verstehen sich inklusive Mehrwertsteuer"
+    }
+  },
+  "map": {
+    "title": "Parkplan",
+    "overview": {
+      "title": "🗺️ Adventure Land Übersicht",
+      "text": "Unser 85 Hektar großer Park ist in drei themenbereiche unterteilt. Nutzen Sie die kostenlose Park-App für GPS-Navigation oder folgen Sie den farbigen Wegweisern vor Ort.",
+      "attractions": "Attraktionen",
+      "restaurants": "Restaurants",
+      "hectares": "Hektar"
+    },
+    "sections": {
+      "parkAreas": "🏰 Park-Bereiche",
+      "gastronomy": "🍽️ Gastronomie",
+      "services": "🛠️ Services & Einrichtungen",
+      "shows": "🎭 Shows & Aufführungen"
+    },
+    "areas": {
+      "thrill": {
+        "title": "Thrill Zone (Nord)",
+        "description": "Für Adrenalinjunkies und Nervenkitzel-Liebhaber",
+        "attractions": {
+          "thunderMountain": "🎢 Thunder Mountain (Achterbahn) - NEU! 65m hoch, 85 km/h",
+          "wildEagle": "🗼 Wild Eagle (Drop Tower) - 45m freier Fall",
+          "speedRacer": "🏁 Speed Racer (Go-Kart-Bahn) - 800m Rundkurs",
+          "tornado": "🌪️ Tornado Twister (Spinning Coaster) - 7 Loopings",
+          "skyShot": "🎯 Sky Shot (Katapult) - 60m in 2 Sekunden",
+          "ghost": "🎭 Ghost Manor (Gruselhaus) - Nur für Mutige!"
+        }
+      },
+      "family": {
+        "title": "Family Area (Mitte)",
+        "description": "Spaß für die ganze Familie",
+        "attractions": {
+          "carousel": "🎠 Märchen Karussell - Nostalgisches Kettenkarussell",
+          "bumperCars": "🚗 Bumper Cars Deluxe - Autoscooter mit LED-Beleuchtung",
+          "miniCoaster": "🐉 Mini-Achterbahn \"Dragon Ride\" - Perfekt für Kinder",
+          "ferrisWheel": "🎡 Riesenrad \"Sky View\" - 45m hoch mit Panoramablick",
+          "waterBattle": "💦 Wasserschlacht \"Splash Zone\" - Erfrischung garantiert!",
+          "train": "🚂 Parkeisenbahn \"Adventure Express\" - 15min Rundfahrt",
+          "amphitheater": "🎪 Amphitheater - Shows täglich um 14:00 & 16:30"
+        }
+      },
+      "adventure": {
+        "title": "Adventure Land (Süd)",
+        "description": "Natur und Abenteuer erleben",
+        "attractions": {
+          "climbingPark": "🧗 Kletterpark \"Tree Top\" - 15 verschiedene Parcours",
+          "summerToboggan": "🛷 Sommerrodelbahn \"Alpine Rush\" - 1,2km bergab",
+          "playground": "🏰 Abenteuerspielplatz - 2000m² Kletterspaß",
+          "pettingZoo": "🐄 Streichelzoo \"Happy Farm\" - Ziegen, Ponys, Kaninchen",
+          "naturePath": "🌿 Naturlehrpfad - Flora und Fauna entdecken",
+          "archery": "🏹 Bogenschießen - Unter Anleitung (ab 8 Jahren)",
+          "fishing": "🎣 Angelteich - Friedlich und entspannend"
+        }
+      }
+    },
+    "restaurants": {
+      "mamaMia": "Pizza \"Mama Mia\"",
+      "bigBite": "Burger Grill \"Big Bite\"",
+      "bratwurst": "Bratwurst Stand",
+      "healthy": "Healthy Corner",
+      "cafe": "Café \"Sweet Dreams\"",
+      "biergarten": "Biergarten \"Gemütlich\""
+    },
+    "services": {
+      "firstAidMain": "Erste Hilfe (Hauptstation)",
+      "firstAidThrill": "Erste Hilfe (Außenstelle)",
+      "babyChanging": "Baby-Wickelräume",
+      "souvenirShop": "Souvenir Shop \"Memories\"",
+      "photoShop": "Foto Shop \"Smile\"",
+      "wheelchairRental": "Rollstuhlverleih",
+      "strollerRental": "Kinderwagen-Verleih",
+      "lostAndFound": "Fundbüro"
+    },
+    "locations": {
+      "thrillZone": "Thrill Zone",
+      "familyArea": "Family Area",
+      "adventureLand": "Adventure Land",
+      "mainEntrance": "Haupteingang",
+      "allAreas": "Alle Bereiche"
+    },
+    "shows": {
+      "circus": {
+        "name": "Zirkus \"Fantasia\"",
+        "location": "Amphitheater"
+      },
+      "fairytale": {
+        "name": "Märchen-Theater",
+        "location": "Family Area"
+      },
+      "magic": {
+        "name": "Zaubershow \"Magic Mike\"",
+        "location": "Thrill Zone"
+      },
+      "safari": {
+        "name": "Tiershow \"Safari\"",
+        "location": "Adventure Land"
+      }
+    },
+    "tips": {
+      "title": "💡 Insider-Tipps",
+      "tip1": "• Besuchen Sie Thunder Mountain am frühen Morgen - kürzere Wartezeiten!",
+      "tip2": "• Das Riesenrad bietet den besten Panoramablick bei Sonnenuntergang",
+      "tip3": "• Kostenlose Park-App mit Live-Wartezeiten verfügbar",
+      "tip4": "• Family-Fast-Pass für €15 - überspringen Sie die Warteschlangen",
+      "tip5": "• Picknicken erlaubt im Adventure Land Bereich",
+      "tip6": "• Kostenloser WLAN im gesamten Park verfügbar"
+    },
+    "footer": "Haben Sie Fragen zur Orientierung?\nUnser Personal hilft gerne weiter! 🗺️"
+  },
+  "editProfile": {
+    "title": "Profil bearbeiten",
+    "accountSection": "Konto",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "dashboardUsername": "Dashboard-Username",
+    "dashboardUsernamePlaceholder": "z. B. RacerMax",
+    "saving": "Speichert...",
+    "saveProfile": "Profil speichern",
+    "securitySection": "Sicherheit",
+    "email": "E-Mail",
+    "currentPasswordRequired": "Aktuelles Passwort (Pflicht für Änderungen)",
+    "currentPassword": "Aktuelles Passwort",
+    "newPasswordOptional": "Neues Passwort (optional)",
+    "newPassword": "Neues Passwort",
+    "repeatNewPassword": "Neues Passwort wiederholen",
+    "repeatPassword": "Passwort wiederholen",
+    "updateEmailPassword": "E-Mail / Passwort aktualisieren",
+    "messages": {
+      "profileUpdated": "Profil erfolgreich aktualisiert.",
+      "savedTitle": "Gespeichert",
+      "emailAndPasswordUpdated": "E-Mail und Passwort erfolgreich aktualisiert.",
+      "emailUpdatedConfirm": "E-Mail erfolgreich aktualisiert. Bitte E-Mail bestaetigen.",
+      "passwordUpdated": "Passwort erfolgreich aktualisiert.",
+      "securityUpdatedTitle": "Sicherheit aktualisiert",
+      "confirmEmailInbox": "Bitte bestätige die neue E-Mail in deinem Postfach.",
+      "passwordChanged": "Passwort wurde erfolgreich geändert."
+    },
+    "errors": {
+      "noUserFound": "Kein Benutzer gefunden. Bitte erneut anmelden.",
+      "enterCurrentPassword": "Bitte aktuelles Passwort eingeben.",
+      "currentPasswordWrong": "Aktuelles Passwort ist falsch.",
+      "notLoggedIn": "Nicht angemeldet.",
+      "profileSaveFailed": "Profil konnte nicht gespeichert werden.",
+      "newPasswordTooShort": "Neues Passwort muss mindestens 6 Zeichen haben.",
+      "passwordsDontMatch": "Neue Passwörter stimmen nicht überein.",
+      "noSecurityChanges": "Keine Änderungen für E-Mail/Passwort erkannt.",
+      "securitySaveFailed": "Sicherheitsdaten konnten nicht gespeichert werden."
+    }
+  },
+  "notificationsPage": {
+    "title": "Benachrichtigungen",
+    "newsletterTitle": "Newsletter",
+    "newsletterSubtitle": "Erhalte Angebote, Neuigkeiten und Aktionen per E-Mail.",
+    "newsletterSubscribed": "Newsletter erfolgreich abonniert.",
+    "newsletterUnsubscribed": "Newsletter erfolgreich abbestellt.",
+    "popupTitle": "Popup anzeigen",
+    "popupSubtitle": "Steuert ob Popup Benachrichtigungen in der App angezeigt werden sollen",
+    "popupEnabled": "Popup wurde aktiviert.",
+    "popupDisabled": "Popup wurde deaktiviert.",
+    "loading": "Lade Einstellungen...",
+    "saving": "Speichert...",
+    "persistedHint": "Die Einstellungen bleiben auch nach Ein- und Ausloggen gespeichert.",
+    "settingsSaveFailed": "Einstellung konnte nicht gespeichert werden."
+  },
+  "downloadAll": {
+    "title": "Alle Bilder herunterladen",
+    "downloadAllButton": "Alle gekauften Bilder herunterladen ({{count}})",
+    "downloadingProgress": "Lade herunter... {{downloaded}}/{{total}}",
+    "loadingPhotos": "Lade Bilder...",
+    "noPurchasedPhotos": "Keine gekauften Bilder vorhanden.",
+    "noPurchasedPhotosYet": "Noch keine gekauften Bilder.",
+    "imageNumber": "Bild #{{number}}",
+    "permissionRequiredTitle": "Berechtigung erforderlich",
+    "permissionRequiredDescription": "Bitte Zugriff auf Fotos/Galerie erlauben.",
+    "downloadedCount": "{{count}} Bilder wurden heruntergeladen.",
+    "errors": {
+      "loadFailed": "Bilder konnten nicht geladen werden.",
+      "downloadFailedStatus": "Download fehlgeschlagen ({{status}})",
+      "noStorageDirectory": "Kein Speicherverzeichnis gefunden",
+      "downloadAllFailed": "Bilder konnten nicht vollständig heruntergeladen werden."
+    }
+  },
+  "qr": {
+    "noCodeDetectedTitle": "Kein QR-Code erkannt",
+    "noCodeDetectedDescription": "Es wurde kein QR-Code gefunden. Stellen Sie sicher, dass der Code gut sichtbar ist und versuchen Sie es erneut.",
+    "checkingCameraPermission": "Kamera-Berechtigung wird überprüft...",
+    "cameraAccessShort": "Um QR-Codes zu scannen, benötigen wir Zugriff auf Ihre Kamera.",
+    "pointCameraToCode": "Richten Sie die Kamera auf den QR-Code",
+    "flashOn": "Blitz an",
+    "flashOff": "Blitz aus",
+    "privacyNotice": "🔒 Die Kamera wird nur zum Scannen verwendet und speichert keine Bilder"
+  },
+  "claim": {
+    "loading": "Foto wird geladen...",
+    "notFoundTitle": "Foto nicht gefunden",
+    "notFoundDescription": "Der Bildcode ist ungültig oder das Foto ist nicht verfügbar.",
+    "toHome": "Zur Startseite",
+    "unlockingTitle": "Foto wird freigeschaltet",
+    "redirectingTitle": "Weiterleitung...",
+    "unlockingDescription": "Einen Moment bitte. Dein Foto erscheint gleich bei den gekauften Bildern.",
+    "addingToAccount": "Foto wird deinem Konto hinzugefügt",
+    "unlockError": "Freischalten fehlgeschlagen. Bitte erneut versuchen.",
+    "retry": "Erneut versuchen",
+    "headline": "Dein Foto zum Download",
+    "subline": "Melde dich an und verknüpfe dieses Bild direkt mit deinem Konto.",
+    "valueHd": "HD-Download dauerhaft in deiner persönlichen Galerie",
+    "valueShare": "Teile dein Erlebnis direkt mit Freunden",
+    "valueSpeed": "Sieh deine Fahrt im Speed-Ranking und vergleiche dich mit anderen",
+    "stepFound": "Foto gefunden",
+    "stepAccount": "Account",
+    "stepDownload": "Download",
+    "cta": "Kostenlos Freischalten",
+    "login": "Login",
+    "register": "Registrieren",
+    "previewBadge": "VORSCHAU"
+  },
+  "support": {
+    "title": "Hilfe & Support",
+    "heroTitle": "Wir helfen dir schnell weiter",
+    "heroText": "Hier findest du Antworten auf die haeufigsten Fragen zu Fahrten, Bildern, Zahlungen und deinem Konto.",
+    "faqTitle": "FAQ",
+    "faq1Question": "Wie finde ich meine gekauften Bilder?",
+    "faq1Answer": "Oeffne die Galerie und wechsle in den Bereich Meine gekauften Bilder. Dort siehst du alle freigeschalteten Fotos.",
+    "faq2Question": "Warum wird ein Bild nicht heruntergeladen?",
+    "faq2Answer": "Stelle sicher, dass das Bild bereits gekauft wurde und die Internetverbindung stabil ist. Auf Mobile kann zusaetzlich die Medienberechtigung erforderlich sein.",
+    "faq3Question": "Wie kann ich E-Mail oder Passwort aendern?",
+    "faq3Answer": "Gehe in Profil zu Profil bearbeiten. Dort kannst du Kontodaten aktualisieren. Je nach Aktion ist aus Sicherheitsgruenden eine erneute Anmeldung noetig.",
+    "faq4Question": "Wieso erscheint mein Name nicht im Tagesranking?",
+    "faq4Answer": "Das Ranking nutzt deine schnellste freigeschaltete Geschwindigkeit. Pruefe, ob deine Profilangaben gespeichert wurden und ob mindestens ein Bild gekauft wurde.",
+    "faq5Question": "Wie melde ich mich vom Newsletter ab?",
+    "faq5Answer": "Unter Profil > Benachrichtigungen kannst du den Newsletter sowie Popup-Benachrichtigungen jederzeit aktivieren oder deaktivieren.",
+    "contactTitle": "Kontakt",
+    "responseTime": "Antwortzeit: in der Regel innerhalb von 24 Stunden",
+    "reportProblemTitle": "Problem melden",
+    "reportProblemText": "Bitte beschreibe dein Problem moeglichst konkret: betroffene Fahrt, Zeitpunkt, Screenshot und verwendetes Geraet. So koennen wir schneller helfen."
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "heroTitle": "Datenschutzhinweise Liftpictures",
+    "heroDate": "Stand: Februar 2026",
+    "section1Title": "1. Verantwortlicher",
+    "section1Text": "Verantwortlich fuer die Datenverarbeitung in dieser App ist der Betreiber von Liftpictures. Bei Fragen zum Datenschutz kannst du uns jederzeit unter support@liftpictures.app kontaktieren.",
+    "section2Title": "2. Welche Daten wir verarbeiten",
+    "section2Intro": "Wir verarbeiten insbesondere folgende Daten:",
+    "section2Bullet1": "• Kontodaten (E-Mail, Vorname, Nachname, optional Display-Name)",
+    "section2Bullet2": "• Nutzungsdaten (Fahrten, gekaufte Bilder, Favoriten, Warenkorb)",
+    "section2Bullet3": "• Zahlungsbezogene Metadaten (z. B. Stripe-Transaktionsreferenzen)",
+    "section2Bullet4": "• Freiwillige Angaben (z. B. Newsletter-Abo, Profilbild)",
+    "section3Title": "3. Zweck der Verarbeitung",
+    "section3Bullet1": "• Bereitstellung der App und Nutzerverwaltung",
+    "section3Bullet2": "• Anzeige und Freischaltung gekaufter Fotos",
+    "section3Bullet3": "• Zahlungsabwicklung und Betrugsvermeidung",
+    "section3Bullet4": "• Optionaler Versand von Newsletter-Informationen",
+    "section3Bullet5": "• Verbesserung von Stabilitaet und Sicherheit",
+    "section4Title": "4. Rechtsgrundlagen",
+    "section4Text": "Die Verarbeitung erfolgt je nach Kontext auf Basis der Vertragserfuellung (Art. 6 Abs. 1 lit. b DSGVO), berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO) oder deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), z. B. fuer Newsletter.",
+    "section5Title": "5. Speicherdauer",
+    "section5Text": "Wir speichern personenbezogene Daten nur so lange, wie es fuer die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen. Newsletter-Einstellungen kannst du jederzeit in der App aendern.",
+    "section6Title": "6. Weitergabe an Dritte",
+    "section6Text": "Wir setzen technische Dienstleister ein (z. B. Hosting, Datenbank, Zahlungsabwicklung). Eine Weitergabe erfolgt nur im erforderlichen Umfang und auf Grundlage von Auftragsverarbeitungsvertraegen.",
+    "section7Title": "7. Deine Rechte",
+    "section7Bullet1": "• Auskunft ueber gespeicherte Daten",
+    "section7Bullet2": "• Berichtigung unrichtiger Daten",
+    "section7Bullet3": "• Loeschung oder Einschraenkung der Verarbeitung",
+    "section7Bullet4": "• Widerspruch gegen bestimmte Verarbeitungen",
+    "section7Bullet5": "• Datenuebertragbarkeit",
+    "section7Text": "Zur Ausuebung deiner Rechte kontaktiere uns bitte ueber den Support-Bereich.",
+    "section8Title": "8. Sicherheit",
+    "section8Text": "Wir setzen angemessene technische und organisatorische Massnahmen ein, um deine Daten vor Verlust, Missbrauch und unberechtigtem Zugriff zu schuetzen.",
+    "section9Title": "9. Aenderungen dieser Hinweise",
+    "section9Text": "Wir koennen diese Datenschutzhinweise bei Bedarf aktualisieren. Die jeweils aktuelle Version findest du jederzeit auf dieser Seite."
+  }
+}

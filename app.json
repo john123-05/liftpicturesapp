@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "liftpictures",
+    "slug": "liftpictures",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "liftpictures",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.john12305.liftpicturesapp",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow Liftpictures to use your camera so you can take and upload ride photos.",
+        "NSPhotoLibraryUsageDescription": "Allow Liftpictures to access your photos so you can upload and manage ride photos.",
+        "NSPhotoLibraryAddUsageDescription": "Allow Liftpictures to save edited photos to your photo library."
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Liftpictures to access your photos so you can set a profile image."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Liftpictures to access your photos.",
+          "savePhotosPermission": "Allow Liftpictures to save photos to your gallery.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
