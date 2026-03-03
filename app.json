@@ -1,17 +1,20 @@
 {
   "expo": {
-    "name": "liftpictures",
+    "name": "RidePix",
     "slug": "liftpictures",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "icon": "assets/liftpictures.png",
     "orientation": "portrait",
     "scheme": "liftpictures",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true,
+      "icon": "./assets/liftpictures.png",
       "bundleIdentifier": "com.john12305.liftpicturesapp",
       "buildNumber": "1",
       "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
         "NSCameraUsageDescription": "Allow Liftpictures to use your camera so you can take and upload ride photos.",
         "NSPhotoLibraryUsageDescription": "Allow Liftpictures to access your photos so you can upload and manage ride photos.",
         "NSPhotoLibraryAddUsageDescription": "Allow Liftpictures to save edited photos to your photo library."
@@ -42,6 +45,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "bf6e2699-732a-496c-8405-fb253c6a7a94"
+      }
+    },
+    "owner": "johndurden"
   }
 }

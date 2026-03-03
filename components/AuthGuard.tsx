@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter, useSegments, useRootNavigationState } from 'expo-router';
 import { useAuthContext } from '@/contexts/AuthContext';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Text } from 'react-native';
 
 const PUBLIC_ROUTES = ['/', 'auth', 'claim'];
 
@@ -29,6 +29,9 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
     return (
       <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#ff6b35" />
+        <View style={styles.loadingTextWrap}>
+          <Text style={styles.loadingText}>Loading session...</Text>
+        </View>
       </View>
     );
   }
@@ -42,5 +45,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#000',
+  },
+  loadingTextWrap: {
+    marginTop: 12,
+  },
+  loadingText: {
+    color: '#b8b8b8',
+    fontSize: 13,
   },
 });

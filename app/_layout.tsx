@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet, Platform, Animated, Easing, useWindowDimensions } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { AuthProvider } from '@/contexts/AuthContext';
@@ -10,7 +11,17 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import { AccessProvider, useAccess } from '@/contexts/AccessContext';
 import PasswordScreen from '@/components/PasswordScreen';
 import AuthGuard from '@/components/AuthGuard';
+import AppErrorBoundary from '@/components/AppErrorBoundary';
+import FatalRuntimeScreen from '@/components/FatalRuntimeScreen';
 import '@/lib/i18n';
+
+type FatalErrorPayload = {
+  message: string;
+  stack?: string;
+  occurredAt?: string;
+};
+
+const LAST_FATAL_ERROR_KEY = 'liftpictures_last_fatal_error';
 
 function LayoutContent() {
   const { hasAccess, isLoading } = useAccess();
@@ -56,7 +67,11 @@ function LayoutContent() {
   };
 
   if (isLoading) {
-    return <View style={styles.loadingContainer} />;
+    return (
+      <View style={styles.loadingContainer}>
+        <Text style={styles.loadingText}>Loading app...</Text>
+      </View>
+    );
   }
 
   if (!hasAccess) {
@@ -185,10 +200,56 @@ function LayoutContent() {
 
 export default function RootLayout() {
   useFrameworkReady();
+  const [fatalError, setFatalError] = useState<FatalErrorPayload | null>(() => {
+    const globalRef = globalThis as { __LP_FATAL_ERROR_PAYLOAD?: FatalErrorPayload };
+    return globalRef.__LP_FATAL_ERROR_PAYLOAD ?? null;
+  });
+
+  useEffect(() => {
+    const globalRef = globalThis as {
+      __LP_SET_FATAL_ERROR?: (payload: FatalErrorPayload) => void;
+      __LP_FATAL_ERROR_PAYLOAD?: FatalErrorPayload;
+    };
+    globalRef.__LP_SET_FATAL_ERROR = (payload: FatalErrorPayload) => {
+      setFatalError(payload);
+    };
+
+    if (globalRef.__LP_FATAL_ERROR_PAYLOAD) {
+      setFatalError(globalRef.__LP_FATAL_ERROR_PAYLOAD);
+    }
+
+    AsyncStorage.getItem(LAST_FATAL_ERROR_KEY)
+      .then((raw) => {
+        if (!raw) return;
+        try {
+          setFatalError(JSON.parse(raw) as FatalErrorPayload);
+        } catch {
+          // ignore invalid payload
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      delete globalRef.__LP_SET_FATAL_ERROR;
+    };
+  }, []);
+
+  const handleClearFatal = () => {
+    setFatalError(null);
+    const globalRef = globalThis as { __LP_FATAL_ERROR_PAYLOAD?: FatalErrorPayload };
+    delete globalRef.__LP_FATAL_ERROR_PAYLOAD;
+    AsyncStorage.removeItem(LAST_FATAL_ERROR_KEY).catch(() => {});
+  };
+
+  if (fatalError) {
+    return <FatalRuntimeScreen error={fatalError} onClear={handleClearFatal} />;
+  }
 
   return (
     <AccessProvider>
-      <LayoutContent />
+      <AppErrorBoundary>
+        <LayoutContent />
+      </AppErrorBoundary>
     </AccessProvider>
   );
 }
@@ -354,5 +415,11 @@ const styles = StyleSheet.create({
   loadingContainer: {
     flex: 1,
     backgroundColor: '#000',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  loadingText: {
+    color: '#bdbdbd',
+    fontSize: 14,
   },
 });

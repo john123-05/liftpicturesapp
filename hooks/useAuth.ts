@@ -205,6 +205,14 @@ export function useAuth() {
 
   useEffect(() => {
     let mounted = true;
+    const loadingWatchdog = setTimeout(() => {
+      if (!mounted) return;
+      setAuthState((prev) => {
+        if (!prev.loading) return prev;
+        console.warn('Auth init watchdog: forcing loading=false after timeout');
+        return { ...prev, loading: false };
+      });
+    }, 8000);
 
     const initializeAuth = async () => {
       try {
@@ -253,6 +261,7 @@ export function useAuth() {
 
     return () => {
       mounted = false;
+      clearTimeout(loadingWatchdog);
       subscription.unsubscribe();
     };
   }, [loadUserProfile]);

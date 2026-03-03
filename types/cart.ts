@@ -8,6 +8,7 @@ export interface CartItem {
   quantity: number;
   type?: 'photo' | 'pass' | 'ticket';
   title?: string;
+  description?: string;
   selectedDate?: string;
   ticketType?: string;
 }

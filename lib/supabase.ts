@@ -7,13 +7,15 @@ let supabaseConfigured: boolean;
 // Get environment variables
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '';
+const hasValidSupabaseUrl = !!supabaseUrl && !supabaseUrl.includes('your-project-id');
+const hasValidSupabaseAnonKey = !!supabaseAnonKey && !supabaseAnonKey.includes('your-anon-key');
 
 // Comprehensive environment check
 console.log('🔍 Supabase Environment Check:');
-console.log('EXPO_PUBLIC_SUPABASE_URL exists:', !!supabaseUrl);
-console.log('EXPO_PUBLIC_SUPABASE_ANON_KEY exists:', !!supabaseAnonKey);
+console.log('EXPO_PUBLIC_SUPABASE_URL exists:', hasValidSupabaseUrl);
+console.log('EXPO_PUBLIC_SUPABASE_ANON_KEY exists:', hasValidSupabaseAnonKey);
 
-if (supabaseUrl) {
+if (hasValidSupabaseUrl) {
   console.log('Supabase URL:', supabaseUrl);
   console.log('URL format valid:', supabaseUrl.startsWith('https://'));
   console.log('URL contains supabase.co:', supabaseUrl.includes('.supabase.co'));
@@ -21,7 +23,7 @@ if (supabaseUrl) {
   console.error('ERROR: EXPO_PUBLIC_SUPABASE_URL environment variable is missing!');
 }
 
-if (supabaseAnonKey) {
+if (hasValidSupabaseAnonKey) {
   console.log('Anon key length:', supabaseAnonKey.length);
   console.log('Anon key starts with:', supabaseAnonKey.substring(0, 10) + '...');
 } else {
@@ -29,7 +31,7 @@ if (supabaseAnonKey) {
 }
 
 // Check if environment variables are properly configured
-if (!supabaseUrl || !supabaseAnonKey) {
+if (!hasValidSupabaseUrl || !hasValidSupabaseAnonKey) {
   console.error('❌ SUPABASE CONFIGURATION ERROR:');
   console.error('Please create a .env file in your project root with:');
   console.error('EXPO_PUBLIC_SUPABASE_URL=https://your-project-id.supabase.co');

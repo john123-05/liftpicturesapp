@@ -35,6 +35,10 @@ export default function CartScreen() {
 
       // Get Supabase URL from environment
       const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
+      const webCheckoutBaseUrl =
+        Platform.OS === 'web' && typeof window !== 'undefined'
+          ? window.location.origin
+          : process.env.EXPO_PUBLIC_WEB_CHECKOUT_RETURN_URL || 'https://liftpictures.app';
 
       console.log('Starting checkout with URL:', supabaseUrl);
 
@@ -47,8 +51,8 @@ export default function CartScreen() {
         },
         body: JSON.stringify({
           items: items,
-          successUrl: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-          cancelUrl: `${window.location.origin}/cart`,
+          successUrl: `${webCheckoutBaseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancelUrl: `${webCheckoutBaseUrl}/cart`,
         }),
       });
 
@@ -281,7 +285,7 @@ export default function CartScreen() {
         <View style={styles.securityNote}>
           <Lock size={16} color="#00c851" />
           <Text style={styles.securityText}>
-            Sichere Zahlung mit Stripe • SSL-verschlüsselt
+            Sichere Zahlung mit Stripe • SSL-verschluesselt
           </Text>
         </View>
       </ScrollView>

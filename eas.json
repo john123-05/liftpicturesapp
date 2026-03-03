@@ -14,11 +14,29 @@
         "simulator": true
       }
     },
+    "preflight-ios": {
+      "distribution": "internal",
+      "environment": "production"
+    },
     "production": {
-      "autoIncrement": "buildNumber"
+      "autoIncrement": true,
+      "environment": "production"
+    },
+    "testflight": {
+      "autoIncrement": true,
+      "environment": "production"
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "ascAppId": "6759715172"
+      }
+    },
+    "testflight": {
+      "ios": {
+        "ascAppId": "6759715172"
+      }
+    }
   }
 }
