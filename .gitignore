@@ -6,6 +6,8 @@ node_modules/
 dist/
 dist-export-check/
 dist-export-check-2/
+dist-ios-check/
+dist-ios-check-2/
 web-build/
 expo-env.d.ts
 
